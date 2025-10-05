@@ -1,7 +1,7 @@
 
 from typing import Tuple
+
 import pandas as pd
-import pandera as pa
 from pandera import Column, DataFrameSchema
 
 MOVIE_COLUMNS = [

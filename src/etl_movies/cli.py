@@ -1,9 +1,11 @@
 
 import argparse
-from .extract import iter_movies
-from .transform import normalize_movies
-from .load import load_tables
+
 from .db import test_connection
+from .extract import iter_movies
+from .load import load_tables
+from .transform import normalize_movies
+
 
 def main():
     parser = argparse.ArgumentParser(description="ETL TMDB → SQL")

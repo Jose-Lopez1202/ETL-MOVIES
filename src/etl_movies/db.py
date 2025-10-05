@@ -1,7 +1,9 @@
 
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
+
 from .config import settings
+
 
 def get_engine(echo: bool = False) -> Engine:
     """Crea un engine de SQLAlchemy a partir de DATABASE_URL."""

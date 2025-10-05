@@ -1,6 +1,7 @@
 
+from typing import Any, Dict, Iterator
+
 import requests
-from typing import Iterator, Dict, Any
 
 from .config import settings
 
