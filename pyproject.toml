@@ -1,0 +1,31 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etl-movies"
+version = "0.1.0"
+description = "ETL de películas desde TMDB hacia una base SQL (Postgres/SQL Server)"
+authors = [{name="Tu Nombre"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.2.0",
+    "requests>=2.31.0",
+    "SQLAlchemy>=2.0.25",
+    "python-dotenv>=1.0.1",
+    "pandera>=0.20.0",
+    # Conectores (elige según tu motor)
+    # "psycopg2-binary>=2.9.9",
+    # "pyodbc>=5.0.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
